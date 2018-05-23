@@ -21,7 +21,7 @@ s3.listObjects({
         .then((buffer) => {
           s3.upload({
             Bucket: bucket,
-            Key: 'thumbnail/' + data.Key,
+            Key: thumbnailPaths[size] + '/' + data.Key,
             Body: buffer,
             ACL: 'private',
             ContentType: obj.ContentType
